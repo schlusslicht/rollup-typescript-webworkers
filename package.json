@@ -10,6 +10,7 @@
   "iife": "dist/iife/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
+    "microbundle": "microbundle -f iife --worker-loader -o www/dist/iife/index.js && live-server www",
     "build": "npm-run-all --parallel build:**",
     "build:all": "rollup --config",
     "build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --outDir ./dist/types",
@@ -23,6 +24,7 @@
     "@typescript-eslint/parser": "^2.33.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.0.0",
+    "microbundle": "schlusslicht/microbundle#96b89f4",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.10.0",
     "rollup-plugin-commonjs": "^10.1.0",
